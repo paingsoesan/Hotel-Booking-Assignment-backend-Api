@@ -25,6 +25,8 @@ public class ReservationController {
         return ResponseEntity.status(HttpStatus.FOUND).body(applicationService.findAll());
     }
 
+
+    //first step
     @PostMapping(value = "/reservation/random/{firstName}/{lastName}/{date}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<BookingResult> reservationForNewGuest(@PathVariable("firstName") String firstName,
                                                                 @PathVariable("lastName") String lastName,
